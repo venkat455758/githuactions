@@ -1,19 +1,13 @@
-name: Github actions
-
-on: workflow_dispatch
-
-env:
-  APP_ENV: "dev"
-
+name: Github actios on deploy
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: choose them the default
 jobs:
-  env_demo:
+  input-demo:
     runs-on: ubuntu-latest
-    env:
-      APP_ENV: "Prod"
-
     steps:
-      - name: connect
-        env:
-          APP_ENV: "stage"
-        run: echo "env is $APP_ENV"
+      - name: deploy
+        run: echo "deploy the app ${{ inputs.environment }}"
 
