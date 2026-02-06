@@ -6,5 +6,5 @@ jobs:
     steps:
       - name: ths
         run: |
-          echo " this is ${{ vars.mynew }}
+          echo " this is ${{ vars.mynew }} "
           echo "this is venkat"
