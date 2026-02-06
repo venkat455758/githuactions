@@ -1,14 +1,10 @@
-name: githubaction
-on:  workflow_dispatch
+name: github
+on: push
 jobs:
-  build:
+  hayan:
     runs-on: ubuntu-latest
     steps:
-      - name: d1
-        run: echo "this is venkat"
-  test:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: fa1
-        run: echo "this after the build step"
+      - name: ths
+        run: |
+          echo " this is ${{ vars.mynew }}
+          echo "this is venkat"
