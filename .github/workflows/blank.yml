@@ -1,0 +1,14 @@
+name: githubaction
+on:  workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: d1
+        run: echo "this is venkat"
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: fa1
+        run: echo "this after the build step"
