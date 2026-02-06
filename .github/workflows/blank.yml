@@ -1,10 +1,13 @@
-name: github
-on: push
+name: secret
+on: 
+  push:
+    branches:
+      - main
+      - dev
+      - prod
 jobs:
-  hayan:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: ths
-        run: |
-          echo " this is ${{ vars.mynew }} "
-          echo "this is venkat"
+      - name: scret
+        run: echo "this is my ${{ secrets.DOCKER_PASSWD }}"  
