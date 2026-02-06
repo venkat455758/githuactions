@@ -1,14 +1,19 @@
-name: Github actios
+name: Github actions
+
 on: workflow_dispatch
+
 env:
   APP_ENV: "dev"
+
 jobs:
   env_demo:
-  env:
-    APP_ENV: "Prod"
     runs-on: ubuntu-latest
+    env:
+      APP_ENV: "Prod"
+
     steps:
       - name: connect
         env:
           APP_ENV: "stage"
-        run: echo "arr is $APP_ENV
+        run: echo "env is $APP_ENV"
+
